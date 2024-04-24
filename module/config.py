@@ -12,6 +12,8 @@ class MediConf:
 
         # GLOBAL SECTION
         self.headless = self.config.get('GLOBAL', 'HEADLESS')
+        self.telegram_token = self.config.get('GLOBAL', 'TELEGRAM_TOKEN')
+        self.telegram_chat_id = self.config.get('GLOBAL', 'TELEGRAM_CHAT_ID')
 
         # SHADOW COOKIE SECTION
         self.cookie_button = self.config.get('LOCATORS', 'CLASS_COOKIE_BTN')
@@ -32,7 +34,7 @@ class MediConf:
         # SEARCH SECTION
         self.search_button = self.config.get('LOCATORS', 'XPATH_SEARCH_BTN')
         self.search_url = self.config.get('GLOBAL', 'SEARCH_URL')
-        self.app_row = self.config.get('LOCATORS', 'XPATH_APP_ROW')
+        self.app_row = self.config.get('LOCATORS', 'CLASS_APP_ROW')
         self.app_time = self.config.get('LOCATORS', 'APP_TIME')
         self.app_localization = self.config.get('LOCATORS', 'APP_LOCALIZATION')
         self.app_doctor = self.config.get('LOCATORS', 'APP_DOCTOR')

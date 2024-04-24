@@ -79,9 +79,12 @@ class SearchForVisit:
         )).send_keys(Keys.ENTER)
 
         # PARSE RESULTS
-        WebDriverWait(self.driver, 3). until(EC.presence_of_all_elements_located(
-            (By.XPATH, self.config.app_row)
-        ))
-        for element in self.driver.find_elements(By.XPATH, self.config.app_row):
-            print(element)
-            print(element.get_attribute("innerHTML"))
+        app_row = self.driver.find_elements(By.CLASS_NAME, self.config.app_row)
+        appointments = []
+
+        if app_row:
+            WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(app_row[0]))
+            for element in app_row:
+                appointments.append(element.get_attribute("innerHTML"))
+
+        return appointments
