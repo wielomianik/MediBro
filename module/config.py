@@ -11,7 +11,6 @@ class MediConf:
         self.config.read(sys.path[0] + '//config.ini')
 
         # GLOBAL SECTION
-        self.headless = self.config.get('GLOBAL', 'HEADLESS')
         self.telegram_token = self.config.get('GLOBAL', 'TELEGRAM_TOKEN')
         self.telegram_chat_id = self.config.get('GLOBAL', 'TELEGRAM_CHAT_ID')
 
@@ -28,7 +27,6 @@ class MediConf:
         self.username_button = self.config.get('LOCATORS', 'ID_USER_BTN')
         self.password_button = self.config.get('LOCATORS', 'ID_PASSWORD_BTN')
         self.login_button = self.config.get('LOCATORS', 'ID_LOGIN_BTN')
-        self.home_button = self.config.get('LOCATORS', 'XPATH_HOME_BTN')
         self.granted_button = self.config.get('LOCATORS', 'XPATH_GRANTED_BTN')
 
         # SEARCH SECTION

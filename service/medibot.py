@@ -1,5 +1,5 @@
-import requests
 from module.config import MediConf
+import requests
 
 
 class MediBot:
