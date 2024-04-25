@@ -1,0 +1,28 @@
+[GLOBAL]
+SEARCH_URL = https://mol.medicover.pl/MyVisits?regionId=205&bookingTypeId=2&specializationId=24
+TELEGRAM_TOKEN =
+TELEGRAM_CHAT_ID =
+
+[LOGIN]
+URL = https://www.medicover.pl
+USERNAME =
+PASSWORD =
+
+[LOCATORS]
+CLASS_COOKIE_BTN = cmptxt_btn_yes
+ID_SHADOW_HOST = cmpwrapper
+
+XPATH_REDIRECT_BTN = /html/body/div[2]/div[3]/div[3]/div[5]/div[3]/a
+XPATH_ONLINE_BTN = //*[@id="oidc-submit"]
+
+ID_USER_BTN = UserName
+ID_PASSWORD_BTN = Password
+ID_LOGIN_BTN = loginBtn
+
+XPATH_GRANTED_BTN = /html/body/div[3]/div/header/div/div/article[2]/div/div/div/div[2]/button
+XPATH_SEARCH_BTN = /html/body/div[3]/div/div[4]/div/div/div/div[2]/div/app-root/ng-component/app-filter/section/div[2]/form/div[2]/div/button
+
+CLASS_APP_ROW = freeSlot
+APP_DOCTOR = doctorName
+APP_TIME = slot-time
+APP_LOCALIZATION = clinicName
