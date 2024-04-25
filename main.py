@@ -11,8 +11,12 @@ if __name__ == '__main__':
 
     try:
         medicover.login()
-        for element in mediparser.parse_inner_html(medicover.search()):
-            medibot.send_notification("Wizyta: {}, {}, {}".format(*element))
+        result = medicover.search()
+        if result:
+            for element in mediparser.parse_inner_html(medicover.search()):
+                medibot.send_notification("Wizyta: {}, {}, {}".format(*element))
+        else:
+            print("Brak wizyt...")
 
     except Exception:
         medibot.send_notification(format_exc())

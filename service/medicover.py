@@ -1,4 +1,4 @@
-from selenium.common import NoSuchElementException, TimeoutException
+from selenium.common import NoSuchElementException
 from selenium.webdriver import Keys
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
@@ -6,6 +6,7 @@ from module.config import MediConf
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+import time
 
 
 class MediCover:
@@ -35,7 +36,8 @@ class MediCover:
         self.driver.switch_to.window(self.driver.window_handles[-1])
 
         # CLICK ON PROBLEMATIC LOGIN BUTTON THAT IS REDIRECTING TO ANOTHER THIRD WINDOW
-        while True:
+        start_time = time.time()
+        while time.time() - start_time < 30:
             if len(self.driver.window_handles) == 2:
                 WebDriverWait(self.driver, 3).until(
                     EC.element_to_be_clickable(
