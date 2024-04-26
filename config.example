@@ -1,5 +1,5 @@
 [GLOBAL]
-SEARCH_URL = https://mol.medicover.pl/MyVisits?regionId=205&bookingTypeId=2&specializationId=24
+SEARCH_URL = https://mol.medicover.pl/MyVisits?regionId=205&bookingTypeId=2&specializationId=24&doctorId=411480
 TELEGRAM_TOKEN =
 TELEGRAM_CHAT_ID =
 

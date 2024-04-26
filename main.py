@@ -14,9 +14,9 @@ if __name__ == '__main__':
         result = medicover.search()
         if result:
             for element in mediparser.parse_inner_html(medicover.search()):
-                medibot.send_notification("Wizyta: {}, {}, {}".format(*element))
+                medibot.send_notification("There is an available appointment: {}, {}, {}".format(*element))
         else:
-            print("Brak wizyt...")
+            print("There are no available appointments...")
 
     except Exception:
         medibot.send_notification(format_exc())
